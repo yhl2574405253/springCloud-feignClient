@@ -1,0 +1,27 @@
+server:
+  port: 8093
+
+spring:
+  application:
+    name: feign-center
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.0.1.65:8081/eureka/
+
+#配置算法
+#被调用服务的名称
+mail-center:
+  ribbon:
+#   配置算法的名称，在这里我用的是随机的算法
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+#配置Feign自带的断路器
+feign:
+  hystrix:
+    enabled: true
+
+
+
+
