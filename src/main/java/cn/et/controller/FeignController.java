@@ -31,7 +31,7 @@ public class FeignController {
         }
     }
 
-    @RequestMapping("test3")
+    @RequestMapping("FeignTest")
     public String test3(String name){
         return sendMailService.test3(name);
     }
